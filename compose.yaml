@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  mariadb:
+    image: 'mariadb:latest'
+    environment:
+      - 'MARIADB_DATABASE=LibreriaBD'      # Nombre de la base de datos a crear
+      - 'MARIADB_PASSWORD=secret'           # Contraseña para el usuario 'myuser'
+      - 'MARIADB_ROOT_PASSWORD=Marshmello12' # Contraseña para el usuario root
+      - 'MARIADB_USER=myuser'               # Nombre de usuario para la base de datos
+    ports:
+      - '3306:3306'                         # Mapea el puerto 3306 de tu contenedor al puerto 3306 de tu máquina local
+    volumes:
+      - mariadb_data:/var/lib/mysql         # Volumen para persistir los datos de la base de datos
+    networks:
+      - mariadb_network
+
+volumes:
+  mariadb_data:                         # Volumen para los datos de la base de datos
+
+networks:
+  mariadb_network:                      # Red para los contenedores
+    driver: bridge
