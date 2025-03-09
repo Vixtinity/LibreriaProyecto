@@ -7,7 +7,7 @@ services:
       - 'MARIADB_ROOT_PASSWORD=Marshmello12'
       - 'MARIADB_USER=myuser'
     ports:
-      - '3307:3306'
+      - '6000:3306'  # Mapea el puerto 3306 del contenedor al 6000 de la máquina
     volumes:
       - mariadb_data:/var/lib/mysql
     networks:
