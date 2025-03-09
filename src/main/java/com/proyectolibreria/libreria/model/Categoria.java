@@ -8,6 +8,7 @@ public class Categoria {
 
     @Id
     private Long id;
+    
     private String nombre;
 
     // Getters y Setters
