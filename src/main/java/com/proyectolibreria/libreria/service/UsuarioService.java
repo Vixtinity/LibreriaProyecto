@@ -1,7 +1,8 @@
 package com.proyectolibreria.libreria.service;
 
 import com.proyectolibreria.libreria.model.Usuario;
-import com.proyectolibreria.libreria.Repository.UsuarioRepository;
+import com.proyectolibreria.libreria.repository.UsuarioRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
