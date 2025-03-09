@@ -4,6 +4,17 @@
     <title>Mi Librería</title>
 </head>
 <body>
-    <h1>Libreria</h1>
+    <div>
+        <h1>Libros</h1>
+        <ul>
+            <li th:each="libro : ${libros}">
+                <p>Title: <span th:text="${libro.titulo}"></span></p>
+                <p>Autor: <span th:text="${libro.autor.nombre}"></span></p>
+                <p>Categoría: <span th:text="${libro.categoria.nombre}"></span></p>
+                <p>Precio: <span th:text="${libro.precio}"></span></p>
+                <p>Stock: <span th:text="${libro.stock}"></span></p>
+            </li>
+        </ul>
+    </div>
 </body>
 </html>

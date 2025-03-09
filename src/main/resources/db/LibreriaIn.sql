@@ -37,26 +37,6 @@ CREATE TABLE usuarios (
     telefono VARCHAR(20)
 );
 
--- Tabla de Pedidos
-CREATE TABLE pedidos (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    id_usuario INT,
-    fecha_pedido DATETIME DEFAULT CURRENT_TIMESTAMP,
-    total DECIMAL(8,2),
-    FOREIGN KEY (id_usuario) REFERENCES usuarios(id)
-);
-
--- Tabla de Detalle de Pedidos (Relación entre pedidos y libros)
-CREATE TABLE detalle_pedidos (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    id_pedido INT,
-    id_libro INT,
-    cantidad INT,
-    subtotal DECIMAL(8,2),
-    FOREIGN KEY (id_pedido) REFERENCES pedidos(id),
-    FOREIGN KEY (id_libro) REFERENCES libros(id)
-);
-
 
 --Inserciones--
 INSERT INTO autores (nombre, nacionalidad, fecha_nacimiento) VALUES
@@ -87,15 +67,3 @@ INSERT INTO usuarios (nombre, email, password, direccion, telefono) VALUES
 ('Carlos García', 'carlos@example.com', 'qwerty', 'Calle C 789', '456123789'),
 ('Ana Torres', 'ana@example.com', 'admin123', 'Avenida Z 999', '741852963'),
 ('Pedro Ramírez', 'pedro@example.com', 'testpass', 'Calle X 321', '369258147');
-
-INSERT INTO pedidos (id_usuario, total) VALUES
-(1, 42.00), (2, 55.00), (3, 19.00), (4, 75.00), (5, 35.00);
-
-INSERT INTO detalle_pedidos (id_pedido, id_libro, cantidad, subtotal) VALUES
-(1, 1, 1, 19.00),
-(1, 3, 1, 15.00),
-(2, 2, 2, 45.00),
-(3, 5, 1, 24.00),
-(4, 4, 3, 56.00),
-(5, 6, 1, 20.00),
-(5, 7, 1, 23.00);
