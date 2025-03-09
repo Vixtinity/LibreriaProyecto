@@ -1,5 +1,5 @@
 package com.proyectolibreria.libreria.service;
 
-public class LibroService {
+public class libroService {
     
 }

@@ -1,21 +1,21 @@
 package com.proyectolibreria.libreria.controller;
 
-import com.proyectolibreria.libreria.service.CategoriaService;
+import com.proyectolibreria.libreria.service.categoriaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class CategoriaController {
+public class categoriaController {
 
     @Autowired
-    private CategoriaService categoriaService;
+    private categoriaService categoriaService;
 
+    // Este controlador solo manejará la lógica relacionada con las categorías
     @GetMapping("/categorias")
-    public String listarCategorias(Model model) {
-        // Obtén la lista de categorías desde el servicio
-        model.addAttribute("categorias", categoriaService.obtenerTodasCategorias());
-        return "categorias";  // nombre de la vista Thymeleaf
+    public String mostrarCategorias(Model model) {
+        model.addAttribute("categorias", categoriaService.findAll());
+        return "categorias";  // Puedes tener una vista para las categorías si lo deseas
     }
 }

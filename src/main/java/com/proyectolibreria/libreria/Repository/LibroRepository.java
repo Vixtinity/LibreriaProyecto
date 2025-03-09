@@ -1,5 +1,5 @@
 package com.proyectolibreria.libreria.repository;
 
-public class LibroRepository {
+public class libroRepository {
     
 }
