@@ -1,7 +1,6 @@
 CREATE DATABASE IF NOT EXISTS libreriabd;
 USE libreriabd;
 
--- Tabla de Autores
 CREATE TABLE autores (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(100) NOT NULL,
@@ -9,13 +8,11 @@ CREATE TABLE autores (
     fecha_nacimiento DATE
 );
 
--- Tabla de Categorías
 CREATE TABLE categorias (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(50) NOT NULL
 );
 
--- Tabla de Libros
 CREATE TABLE libros (
     id INT AUTO_INCREMENT PRIMARY KEY,
     titulo VARCHAR(200) NOT NULL,
@@ -27,7 +24,6 @@ CREATE TABLE libros (
     FOREIGN KEY (id_categoria) REFERENCES categorias(id)
 );
 
--- Tabla de Usuarios
 CREATE TABLE usuarios (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(100) NOT NULL,
@@ -37,8 +33,6 @@ CREATE TABLE usuarios (
     telefono VARCHAR(20)
 );
 
-
---Inserciones--
 INSERT INTO autores (nombre, nacionalidad, fecha_nacimiento) VALUES
 ('Gabriel García Márquez', 'Colombiana', '1927-03-06'),
 ('J.K. Rowling', 'Británica', '1965-07-31'),
