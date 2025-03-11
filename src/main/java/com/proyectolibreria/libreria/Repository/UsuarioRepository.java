@@ -1,7 +1,7 @@
-package com.proyectolibreria.libreria.repository;
+package com.proyectolibreria.libreria.Repository;
 
-import com.proyectolibreria.libreria.model.usuario;
+import com.proyectolibreria.libreria.model.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface usuarioRepository extends JpaRepository<usuario, Long> {
+public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
 }

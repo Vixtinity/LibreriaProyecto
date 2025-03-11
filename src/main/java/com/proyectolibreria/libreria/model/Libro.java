@@ -14,7 +14,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Table(name = "libros")
-public class libro {
+public class Libro {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,9 +26,9 @@ public class libro {
 
     @ManyToOne
     @JoinColumn(name = "id_autor")
-    private autor autor;
+    private Autor autor;
 
     @ManyToOne
     @JoinColumn(name = "id_categoria")
-    private categoria categoria;
+    private Categoria categoria;
 }

@@ -1,7 +1,7 @@
-package com.proyectolibreria.libreria.repository;
+package com.proyectolibreria.libreria.Repository;
 
-import com.proyectolibreria.libreria.model.categoria;
+import com.proyectolibreria.libreria.model.Categoria;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface categoriaRepository extends JpaRepository<categoria, Long> {
+public interface CategoriaRepository extends JpaRepository<Categoria, Long> {
 }
