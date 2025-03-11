@@ -10,7 +10,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Table(name = "categorias")
-public class categoria {
+public class Categoria {
 
     @Id
     private Long id;

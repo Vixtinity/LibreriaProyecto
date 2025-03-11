@@ -1,20 +1,20 @@
 package com.proyectolibreria.libreria.controller;
 
-import com.proyectolibreria.libreria.service.categoriaService;
-import com.proyectolibreria.libreria.service.usuarioService;
+import com.proyectolibreria.libreria.service.CategoriaService;
+import com.proyectolibreria.libreria.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class mainController {
+public class MainController {
 
     @Autowired
-    private categoriaService categoriaService;
+    private CategoriaService categoriaService;
 
     @Autowired
-    private usuarioService usuarioService;
+    private UsuarioService usuarioService;
 
     @GetMapping("/")
     public String mostrarIndex(Model model) {
