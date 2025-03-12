@@ -5,15 +5,11 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
 import jakarta.persistence.JoinColumn;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.Data;
+
 @Entity
-@Getter
-@Setter
-@NoArgsConstructor
+@Data
 public class Libro {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
