@@ -18,8 +18,8 @@ public class UsuarioController {
 
     @GetMapping("/usuarios")
     public String mostrarUsuarios(Model model) {
-        List<Usuario> usuarios = usuarioRepository.findAll(); // Obtener todos los usuarios
-        model.addAttribute("usuarios", usuarios); // Añadir al modelo
-        return "usuarios"; // Nombre de la vista (usuarios.html)
+        List<Usuario> usuarios = usuarioRepository.findAll();
+        model.addAttribute("usuarios", usuarios);
+        return "usuarios";
     }
 }

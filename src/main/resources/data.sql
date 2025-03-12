@@ -23,6 +23,6 @@ INSERT INTO libros (titulo, id_autor, id_categoria, precio, stock) VALUES
 INSERT INTO usuarios (nombre, email, password, direccion, telefono) VALUES
 ('Juan Pérez', 'juan@example.com', 'clave123', 'Calle A 123', '123456789'),
 ('María López', 'maria@example.com', 'password', 'Calle B 456', '987654321'),
-('Carlos García', 'carlos@example.com', 'qwerty', 'Calle C 789', '456123789'),
+('Carlos García', 'carlos@example.com', 'qwert  y', 'Calle C 789', '456123789'),
 ('Ana Torres', 'ana@example.com', 'admin123', 'Avenida Z 999', '741852963'),
 ('Pedro Ramírez', 'pedro@example.com', 'testpass', 'Calle X 321', '369258147');

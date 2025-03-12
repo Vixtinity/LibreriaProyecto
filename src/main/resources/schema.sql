@@ -24,7 +24,7 @@ CREATE TABLE IF NOT EXISTS libros (
 CREATE TABLE IF NOT EXISTS usuarios (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(100) NOT NULL,
-    email VARCHAR(100) UNIQUE NOT NULL,
+    email VARCHAR(100),
     password VARCHAR(255) NOT NULL,
     direccion VARCHAR(255),
     telefono VARCHAR(20)
