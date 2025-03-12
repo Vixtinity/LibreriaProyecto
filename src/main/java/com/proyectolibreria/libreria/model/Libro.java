@@ -8,26 +8,24 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.persistence.JoinColumn;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
-
 @Entity
 @Getter
 @Setter
-@Table(name = "libros")
+@NoArgsConstructor
 public class Libro {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String titulo;
-    private double precio;
-    private int stock;
-
+    private Double precio;
+    private Integer stock;
+    
     @ManyToOne
     @JoinColumn(name = "id_autor")
     private Autor autor;
-
+    
     @ManyToOne
     @JoinColumn(name = "id_categoria")
     private Categoria categoria;
