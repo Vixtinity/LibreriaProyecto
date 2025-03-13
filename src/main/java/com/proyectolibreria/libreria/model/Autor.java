@@ -1,17 +1,21 @@
 package com.proyectolibreria.libreria.model;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.*;
 
 
 @Entity
-@Data
+@Getter
+@Setter
 @Table (name = "autores")
 public class Autor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
+    @Column(name = "nombre")
     private String nombre;
+    @Column(name = "nacionalidad")
     private String nacionalidad;
+    @Column(name = "fecha_nacimiento")
     private String fechaNacimiento;
 }
